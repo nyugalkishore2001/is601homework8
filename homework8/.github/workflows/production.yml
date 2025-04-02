@@ -40,8 +40,8 @@ jobs:
       - name: Log in to DockerHub
         uses: docker/login-action@v3
         with:
-          username: "nyugalkishore"
-          password: "dckr_pat_qDVlEIMbgvHPN-4QKR7GBppJ9zw"
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
           
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
